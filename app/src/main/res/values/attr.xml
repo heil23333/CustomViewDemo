@@ -4,4 +4,7 @@
         <attr name="src" format="reference"/>
         <attr name="my_background" format="color"/>
     </declare-styleable>
+    <declare-styleable name="CustomOvalView">
+        <attr name="color" format="color"/>
+    </declare-styleable>
 </resources>
