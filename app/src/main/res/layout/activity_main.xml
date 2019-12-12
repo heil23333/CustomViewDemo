@@ -14,16 +14,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <com.example.android.customviewdemo.CustomLinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
-            <LinearLayout
+            <com.example.android.customviewdemo.CustomLinearLayout2
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <com.example.android.customviewdemo.CustomOvalView
-                    android:layout_width="150dp"
+                    android:layout_width="100dp"
                     android:layout_height="150dp"
                     android:layout_marginTop="10dp"
                     app:color="#131452"
@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/changeHeight"
                     android:text="改变高度"/>
-            </LinearLayout>
+            </com.example.android.customviewdemo.CustomLinearLayout2>
             <com.example.android.customviewdemo.CustomImageView
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -81,6 +81,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-        </LinearLayout>
+        </com.example.android.customviewdemo.CustomLinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

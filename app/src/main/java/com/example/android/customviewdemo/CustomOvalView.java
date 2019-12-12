@@ -105,7 +105,7 @@ public class CustomOvalView extends View {
                 }
                 resetValue();
                 break;
-            case MotionEvent.ACTION_MOVE:
+            case MotionEvent.ACTION_MOVE://手指在控件上即使不移动也会调用
                 if (Math.abs(touchX - event.getX()) > 2 && Math.abs(touchY - event.getY()) < 2) {
                     isMoved = true;
                     return true;
@@ -136,6 +136,14 @@ public class CustomOvalView extends View {
             default:
                 return "UNKNOWN_ACTION";
         }
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        System.out.println("hl--CustomOvalView----dispatchTouchEvent");
+//        return true;//事件不再处理
+        return false;//事件交付给父View的onTouchEvent()
+//        return super.dispatchTouchEvent(event);
     }
 
     private void resetValue() {
